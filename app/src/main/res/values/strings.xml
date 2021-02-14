@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">GridActivity</string>
+    <string name="grid_item_image">Grid Item Image</string>
+    <string name="grid_item_text">Grid Item Text</string>
 </resources>
