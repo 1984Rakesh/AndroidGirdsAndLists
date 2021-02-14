@@ -6,8 +6,9 @@ import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintLayout
 
-public class GridItemView : CardView {
+public class GridItemView : ConstraintLayout {
     lateinit public var imageView : ImageView
     lateinit public var textView : TextView
 
