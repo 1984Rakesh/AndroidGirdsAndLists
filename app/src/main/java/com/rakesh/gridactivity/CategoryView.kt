@@ -5,10 +5,9 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 
-public class GridItemView : ConstraintLayout {
+public class CategoryView : ConstraintLayout {
     lateinit public var imageView : ImageView
     lateinit public var textView : TextView
 

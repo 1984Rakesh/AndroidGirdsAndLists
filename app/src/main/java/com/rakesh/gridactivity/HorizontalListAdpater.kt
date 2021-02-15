@@ -1,12 +1,11 @@
 package com.rakesh.gridactivity
 
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 class HorizontalListAdapter :
     RecyclerView.Adapter<HorizontalListAdapter.GridItemViewRecyclerViewHolder>() {
-    class GridItemViewRecyclerViewHolder(val girdItemView: GridItemView) :
+    class GridItemViewRecyclerViewHolder(val girdItemView: CategoryView) :
         RecyclerView.ViewHolder(girdItemView) {
 
     }
@@ -15,7 +14,7 @@ class HorizontalListAdapter :
         parent: ViewGroup,
         viewType: Int
     ): GridItemViewRecyclerViewHolder {
-        val gridItemView = GridItemView(parent.context)
+        val gridItemView = CategoryView(parent.context)
         return GridItemViewRecyclerViewHolder(gridItemView)
     }
 

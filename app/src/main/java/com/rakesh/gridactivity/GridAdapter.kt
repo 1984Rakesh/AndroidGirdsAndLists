@@ -28,13 +28,13 @@ public class GridAdapter : BaseAdapter {
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        var gridItemView : GridItemView
+        var gridItemView : CategoryView
 
         if( convertView != null ){
-            gridItemView = convertView as GridItemView
+            gridItemView = convertView as CategoryView
         }
         else {
-            gridItemView = GridItemView(context)
+            gridItemView = CategoryView(context)
         }
 
         var categoryItem : Category = getItem(position) as Category

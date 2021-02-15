@@ -7,33 +7,29 @@
     android:background="@color/main_background"
     tools:context=".MainActivity">
 
-    <GridView
-        android:id="@+id/top_grid"
+    <androidx.fragment.app.FragmentContainerView
+        android:name="com.rakesh.fragment.MainCategoryFragment"
+        android:id="@+id/main_categories_fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:horizontalSpacing="10dp"
-        android:numColumns="3"
-        android:verticalSpacing="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
-    <LinearLayout
-        android:id="@+id/horizontal_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/top_grid">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/hlRecyclerView"
-            android:layout_height="match_parent"
-            android:layout_width="match_parent" />
 
-    </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:id="@+id/horizontal_list"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/top_grid">-->
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/hlRecyclerView"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_width="match_parent" />-->
+
+<!--    </LinearLayout>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
