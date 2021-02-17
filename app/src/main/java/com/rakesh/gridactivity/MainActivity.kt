@@ -2,20 +2,17 @@ package com.rakesh.gridactivity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.*
+import androidx.activity.viewModels
 import com.rakesh.viewmodel.MainCategoriesViewModel
 
 class MainActivity : AppCompatActivity() {
+
+    private val categoriesViewModel: MainCategoriesViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        val layoutManager : LinearLayoutManager =  LinearLayoutManager(this)
-//        layoutManager.orientation = LinearLayoutManager.HORIZONTAL
-//        val recyclerView : RecyclerView = findViewById(R.id.hlRecyclerView)
-//        recyclerView.layoutManager = layoutManager
-//        recyclerView.itemAnimator = DefaultItemAnimator()
-//        recyclerView.adapter = HorizontalListAdapter()
+        categoriesViewModel.getList()
     }
 }
