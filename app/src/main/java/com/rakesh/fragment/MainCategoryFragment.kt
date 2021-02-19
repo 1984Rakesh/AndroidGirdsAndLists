@@ -9,7 +9,7 @@ import com.rakesh.gridactivity.GridAdapter
 import com.rakesh.gridactivity.R
 import com.rakesh.viewmodel.MainCategoriesViewModel
 
-class MainCategoryFragment : Fragment(R.layout.main_categories_grid_view) {
+class MainCategoryFragment : Fragment(R.layout.fragment_main_categories_grid_view) {
     private val viewModel : MainCategoriesViewModel by activityViewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

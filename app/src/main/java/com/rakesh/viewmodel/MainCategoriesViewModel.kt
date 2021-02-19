@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.rakesh.gridactivity.R
 import com.rakesh.model.Category
+import com.rakesh.model.CategoryItems
 
 class MainCategoriesViewModel() : ViewModel() {
 
@@ -22,6 +23,22 @@ class MainCategoriesViewModel() : ViewModel() {
                 Category("Mobile Phone & Devices", R.drawable.ic_mobile),
                 Category("Jobs", R.drawable.ic_job),
                 Category("Community", R.drawable.ic_community),
+        )
+    }
+}
+
+class CategoriesViewModel(val category:Category) : ViewModel() {
+    val topItems : MutableLiveData<MutableList<CategoryItems>> by lazy {
+        MutableLiveData()
+    }
+
+    fun getTopItems() {
+        this.category.topItems = mutableListOf(
+                CategoryItems("4 Bedroom Villa","SR 4,500", "Makka, Saudi Arabia"),
+                CategoryItems("4 Bedroom Villa","SR 4,500", "Makka, Saudi Arabia"),
+                CategoryItems("4 Bedroom Villa","SR 4,500", "Makka, Saudi Arabia"),
+                CategoryItems("4 Bedroom Villa","SR 4,500", "Makka, Saudi Arabia"),
+                CategoryItems("4 Bedroom Villa","SR 4,500", "Makka, Saudi Arabia")
         )
     }
 }
