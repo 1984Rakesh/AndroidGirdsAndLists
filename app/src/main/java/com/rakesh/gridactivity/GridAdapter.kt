@@ -5,6 +5,7 @@ import android.content.Context
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import com.rakesh.view.CategoryView
 
 public class GridAdapter : BaseAdapter {
     private val context : Context

@@ -2,16 +2,17 @@ package com.rakesh.gridactivity
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.rakesh.model.Category
+import com.rakesh.model.CategoryItems
+import com.rakesh.view.CategoryView
 
 class HorizontalListAdapter :
     RecyclerView.Adapter<HorizontalListAdapter.GridItemViewRecyclerViewHolder>() {
-    class GridItemViewRecyclerViewHolder(val categoryItemsView: CategoryItemsView) :
+    class GridItemViewRecyclerViewHolder(val categoryItemsView: CategoryView) :
         RecyclerView.ViewHolder(categoryItemsView) {
 
     }
 
-    var categoryItems : MutableList<Category>? = null
+    var categoryItems : MutableList<CategoryItems>? = null
 
     fun getItem(position: Int): Any {
         return categoryItems?.get(position)!!
@@ -21,14 +22,14 @@ class HorizontalListAdapter :
         parent: ViewGroup,
         viewType: Int
     ): GridItemViewRecyclerViewHolder {
-        val categoryItemsView = CategoryItemsView(parent.context)
+        val categoryItemsView = CategoryView(parent.context)
         return GridItemViewRecyclerViewHolder(categoryItemsView)
     }
 
     override fun onBindViewHolder(holder: GridItemViewRecyclerViewHolder, position: Int) {
-        val item = getItem(position) as Category
+        val item = getItem(position) as CategoryItems
         val categoryItemsView = holder.categoryItemsView
-        categoryItemsView.headerTextView.text = "Top at ${item.name}"
+        categoryItemsView.textView.text = item.name
     }
 
     override fun getItemCount(): Int {

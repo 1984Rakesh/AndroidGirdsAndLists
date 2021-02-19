@@ -33,7 +33,7 @@ class CategoriesViewModel(val category:Category) : ViewModel() {
     }
 
     fun getTopItems() {
-        this.category.topItems = mutableListOf(
+        this.topItems.value = mutableListOf(
                 CategoryItems("4 Bedroom Villa","SR 4,500", "Makka, Saudi Arabia"),
                 CategoryItems("4 Bedroom Villa","SR 4,500", "Makka, Saudi Arabia"),
                 CategoryItems("4 Bedroom Villa","SR 4,500", "Makka, Saudi Arabia"),

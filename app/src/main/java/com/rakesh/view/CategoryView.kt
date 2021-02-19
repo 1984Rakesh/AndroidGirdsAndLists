@@ -1,4 +1,4 @@
-package com.rakesh.gridactivity
+package com.rakesh.view
 
 import android.content.Context
 import android.util.AttributeSet
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import com.rakesh.gridactivity.R
 
 public class CategoryView : ConstraintLayout {
     lateinit public var imageView : ImageView
@@ -21,7 +22,7 @@ public class CategoryView : ConstraintLayout {
 
     fun initializeView(context: Context) {
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        inflater.inflate(R.layout.category_grid_item_view, this)
+        inflater.inflate(R.layout.view_category_grid_item, this)
         imageView = findViewById(R.id.grid_item_view_image)
         textView = findViewById(R.id.grid_item_view_text)
     }
