@@ -7,5 +7,14 @@
     <fragment
         android:id="@+id/categoriesHomeFragment"
         android:name="com.rakesh.fragment.CategoriesHomeFragment"
-        android:label="CategoriesHomeFragment" />
+        android:label="CategoriesHomeFragment" >
+        <action
+            android:id="@+id/action_categoriesHomeFragment_to_categoryItemDetailsFragment"
+            app:destination="@id/categoryItemDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryItemDetailsFragment"
+        android:name="com.rakesh.fragment.CategoryItemDetailsFragment"
+        android:label="fragment_category_item_details"
+        tools:layout="@layout/fragment_category_item_details" />
 </navigation>
