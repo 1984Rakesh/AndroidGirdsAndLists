@@ -22,7 +22,7 @@ public class CategoryView : ConstraintLayout {
 
     fun initializeView(context: Context) {
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        inflater.inflate(R.layout.view_category_grid_item, this)
+        inflater.inflate(R.layout.grid_item_view_category, this)
         imageView = findViewById(R.id.grid_item_view_image)
         textView = findViewById(R.id.grid_item_view_text)
     }
